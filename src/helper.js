@@ -19,10 +19,7 @@ export const inArray = function (value, arr) {
 };
 
 export const openTab = function (url) {
-    if (!chrome.tabs) {
-        return window.open(url);
-    }
-    chrome.tabs.create({url: url, selected: true});
+    return window.open(url);
 };
 
 export const formatDate = function (date, fmt = "yyyy-MM-dd hh:mm:ss") {
